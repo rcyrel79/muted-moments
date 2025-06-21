@@ -1,2 +1,4 @@
-# cyrel-landing-page
-Personal portfolio landing page
+# muted-moments
+Personal blog page
+Also for portfolio
+Static website only
