@@ -1,0 +1,129 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #FFC0CB;
+    font-family: 'Times New Roman';
+}
+
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.main-title {
+    color: #ffffff;
+    font-size: 3rem;
+}
+.header-line {
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    align-items: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.timeline-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem; /* space between timeline entries */
+}
+
+.timeline-month{
+    margin-bottom: 3rem;
+}
+
+.timeline-month-title {
+    font-size: 2rem;       /* ~18px */
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-transform: uppercase; /* If Figma uses uppercase */
+}
+
+.timeline-month-title::after {
+    content: "";
+    display: block;
+    width: 80px;                /* Match Figma line length */
+    height: 3px;
+    background: #ffffff;           /* Figma grey line color */
+    border-radius: 2px;
+    margin: 0.5rem auto 0;
+}
+
+.timeline-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden; /* Ensures child elements (like images) respect rounding */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.timeline-card-image {
+    width: 90%;
+    border-radius: 10px;
+    margin: 0;          /* <-- add this */
+    padding: 0;         /* <-- add this */
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+
+}
+.timeline-card-image img {
+    display: block;     /* <-- prevents extra spacing below */
+    width: 100%;
+    border-radius: 8px; /* or 0px if you want flush corners */
+}
+.timeline-card-content {
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+/* Base desktop styles */
+.timeline__event {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 16px;
+}
+
+/* Mobile override */
+@media (max-width: 768px) {
+    .timeline__event {
+        flex-direction: column;
+    }
+    .header-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .main-title {
+        margin: 0.5rem;
+    }
+}
