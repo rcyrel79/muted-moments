@@ -76,7 +76,17 @@ body {
     background: white;
     border-radius: 10px;
     overflow: hidden; /* Ensures child elements (like images) respect rounding */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1),
+    0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.timeline-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 12px 24px rgba(0, 0, 0, 0.1);
 }
 .timeline-card-image {
     width: 90%;
